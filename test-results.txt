@@ -1,0 +1,26 @@
+File Integrity Checker — Test Results
+
+1. Unchanged file
+Current and baseline SHA-256:
+166fe0d8ee098c16ea4a11e75a026f0a837e43198ebfab4786f850f76079f113
+Result: UNCHANGED — passed.
+
+2. Modified file
+Current SHA-256:
+c020a9d8f07ba6f2874b1d4c336e760732f7dd3051cba7894b974e6656390942
+Baseline SHA-256:
+166fe0d8ee098c16ea4a11e75a026f0a837e43198ebfab4786f850f76079f113
+Result: CHANGED — passed.
+
+3. Missing file
+Renamed sample.txt to sample-backup.txt.
+Result: File missing: sample.txt — passed.
+
+Limitations
+The checker detects differences from a saved baseline.
+It does not determine whether a change is malicious.
+If someone replaces both the file and its baseline, this
+checker cannot reliably reveal the original change.
+
+Development
+Built with AI guidance; all three tests were run locally.
